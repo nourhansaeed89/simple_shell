@@ -17,6 +17,10 @@ int read_user_input(char *user_input);
 int execute_user_command(char *user_command);
 char user_input[MAX_COMMAND_LENGTH];
 int execute_command(char *command);
+char **tokenize_input(char *input);
+int execute_command(char **args);
+char *find_command(const char *command);
+
 
 #endif
 
