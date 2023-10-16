@@ -20,6 +20,16 @@ int execute_command(char *command);
 char **tokenize_input(char *input);
 int execute_command(char **args);
 char *find_command(const char *command);
+void error(const char* message);
+void execute_command(const char* command);
+void error(const char* message);
+void execute_command(const char* command);
+void handle_signal(int signum);
+void execute_exit(void);
+void run_shell();
+void execute_env();
+void run_shell();
+void execute_env();
 
 
 #endif
