@@ -36,6 +36,7 @@ int _strcmp(char *s1, char *s2);
 void _exit_command(char **user_command, char *getcommand, int _exit);
 void _getenv(char **env);
 int _values_path(char **user_command, char **env);
-int _fork_fun(char **user_command, char **av, char **env, char *getcommand, int pathValue, int n);
+int _fork_fun(char **user_command, char **av, char **env, char *getcommand,
+		int pathValue, int n);
 
 #endif
