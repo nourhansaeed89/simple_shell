@@ -1,10 +1,29 @@
 #include "myshell.h"
 /**
- * main - main
- * @ac: count of argumnents
- * @av: arg
- * @env: env
+ * main - main arguments functions
+ * @ac:count of argumnents
+ * @av: arguments
+ * @env: environment
  * Return: _exit = 0.
+ */
+/**
+ * _getline_command - Read a line from the standard input
+ * Return: String containing the line
+ */
+/**
+ * _get_token - Tokenize the command into an array of tokens
+ * @command: Input command string
+ * Return: Array of tokens
+ */
+/**
+ * _strcmp - Compare two strings
+ * @s1: First string
+ * @s2: Second string
+ * Return: 0 if strings are the same, non-zero otherwise
+ */
+/**
+ * _exit_command - Handle the exit command
+ * @user_command:
  */
 int main(int ac, char **av, char **env)
 {
