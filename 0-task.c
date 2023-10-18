@@ -1,54 +1,54 @@
 #include "myshell.h"
 /**
- *_strcat - copy string to another string.
- *@dest: char
- *@src: char
+ *_strcat - copy str to str
+ *@dest: dest char
+ *@src: source char
  *Return: dest
  *
  */
 
 char *_strcat(char *dest, char *src)
 {
-	int d = 0;
-	int s = 0;
+	int ds = 0;
+	int st = 0;
 
-	while (dest[d] != '\0')
+	while (dest[ds] != '\0')
 	{
-		d++;
+		ds++;
 	}
-	while (src[s] != '\0')
+	while (src[st] != '\0')
 	{
-		dest[d] = src[s];
-		d++;
-		s++;
+		dest[ds] = src[st];
+		ds++;
+		st++;
 	}
-	dest[d] = '\0';
+	dest[ds] = '\0';
 	return (dest);
 }
 
 /**
- * _strcmp - compare the values of a string
- * @s1: character
- * @s2: character
+ * _strcmp - compare string  values
+ * @s1: input1
+ * @s2: input2
  * Return: 0
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int a;
+	int c;
 
-	for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++)
+	for (c = 0; s1[c] != '\0' && s2[c] != '\0'; c++)
 	{
-		if (s1[a] != s2[a])
-			return ((int)s1[a] - s2[a]);
+		if (s1[c] != s2[c])
+			return ((int)s1[c] - s2[c]);
 	}
 	return (0);
 }
 
 /**
- * _strlen - copies the string pointed to by src into dest
- * @s: A pointer
- * Return: char pointer to dest
+ * _strlen - copy  function
+ * @s: pointer
+ * Return: char
  */
 
 int _strlen(char *s)
@@ -64,11 +64,11 @@ int _strlen(char *s)
 }
 
 /**
- *_strncmp -  function that compares two strings.
- *@s1: string one
- *@s2: string two
- *@n: number of characters
- * Return: diference
+ *_strncmp -  function compares two strings.
+ *@s1: input one
+ *@s2: input two
+ *@n: num of char
+ * Return: num
  */
 
 size_t _strncmp(char *s1, char *s2, size_t n)
@@ -88,9 +88,9 @@ size_t _strncmp(char *s1, char *s2, size_t n)
 }
 
 /**
- * _strcpy - copies the string pointed to by src into dest
- * @dest: destination of the copy
- * @src: source of the copy
+ * _strcpy - func that copies the string
+ * @dest: dest of  input
+ * @src: source of input
  *
  * Return: char pointer to dest
  */
