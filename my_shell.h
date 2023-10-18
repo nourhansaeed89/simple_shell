@@ -9,9 +9,13 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+
+
 #define MAX_BUFFER_SIZE 1024
 #define MAX_COMMAND_LENGTH 1024
 
+
+int execute_command(char *command);
 void display_prompt(void);
 int read_user_input(char *user_input);
 int execute_user_command(char *user_command);
