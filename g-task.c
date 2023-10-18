@@ -1,7 +1,7 @@
-#include "shell.h"
+#include "myshell.h"
 /**
  * _getline_command - print "#cisfun$ "
- * Return: line of string input for user
+ * Return: void
  *
  */
 
@@ -13,11 +13,11 @@ char *_getline_command(void)
 	if (isatty(STDIN_FILENO))
 	write(STDOUT_FILENO, "$ ", 2);
 
-	if (getline(lineptr, &charter_user, stdin) == -1)
+if (getline(&lineptr, &charter_user, stdin) == -1)
 	{
 		free(lineptr);
 		return (NULL);
 	}
 
-			return (liner);
+			return (lineptr);
 }
