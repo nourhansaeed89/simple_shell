@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef MYSHELL_H
+#define MYSHELL_H
 #define _GNU_SOURCE
 
 #include <stdio.h>
