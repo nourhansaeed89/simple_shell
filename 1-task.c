@@ -1,76 +1,67 @@
-#include "shell.h"
+#include "myshell.h"
 
 char *_strchr(const char *s, int c);
 size_t _strspn(const char *s1, const char *s2);
 size_t _strcspn(const char *s1, const char *s2);
 
 /**
- * _strtok - breaks the string s1 into tokens and null-terminates them.
- * Delimiter-Characters at the beginning and end
- *of str are skipped. On each subsequent call delim may change.
+ * _strtok -function that return the token of 1st and next str
  * @str: string to tokenize
- * @delim: string with the character that delimit srt.
- * Return: the first/next token if possible, a null-pointer otherwise.
+ * @delim: delimit srt.
+ * Return: str
  **/
 char *_strtok(char *str, const char *delim)
 {
-	static char *p;
+	static char *x;
 
 	if (str)
-		p = str;
-	else if (!p)
+		x = str;
+	else if (!x)
 		return (0);
-	str = p + _strspn(p, delim);
-	p = str + _strcspn(str, delim);
-	if (p == str)
-		return (p = 0);
-	p = *p ? *p = 0, p + 1 : 0;
+	str = x + _strspn(x, delim);
+	x = str + _strcspn(str, delim);
+	if (x == str)
+		return (x = 0);
+	x = *x ? *x = 0, x + 1 : 0;
 	return (str);
 }
 /**
- * _strcspn - computes the length of the maximum initial segment of the string
- * pointed to by s1which consists entirely of characters not from the
- * string pointed to by s2.
- * @s1: string to check
- * @s2: string useful to compare
- * Return: the length of the segment.
+ * _strcspn - func that computes the length of string
+ * @s1: input string
+ * @s2: 2nd input
+ * Return: the length of strg
  **/
 size_t _strcspn(const char *s1, const char *s2)
 {
-	size_t ret = 0;
+	size_t l = 0;
 
 	while (*s1)
 	{
 		if (_strchr(s2, *s1))
-			return (ret);
-		s1++, ret++;
+			return (l);
+		s1++, l++;
 	}
-	return (ret);
+	return (l);
 }
 /**
- * _strspn - computes the length of the maximum initial segment of the string
- * pointed to by s1 which consists entirely of characters from the string
- * pointed to by s2.
- * @s1: strint to compute the lengh
- * @s2: string delimit
- * Return: the length of the segment.
+ * _strspn - function that return max
+ * @s1: in1
+ * @s2: in2
+ * Return: length
  **/
 size_t _strspn(const char *s1, const char *s2)
 {
-	size_t ret = 0;
+	size_t l = 0;
 
 	while (*s1 && _strchr(s2, *s1++))
-		ret++;
-	return (ret);
+		l++;
+	return (l);
 }
 /**
- * _strchr - locates the ﬁrst occurrence of c (converted to a char) in the
- * string pointed to by s. The terminating null character is considered to be
- * part of the string.
+ * _strchr - function that return a pointer of located char
  * @s: string
  * @c: character
- * Return: a pointer to the located character, or a null pointer
- * if the character does not occur in the string.
+ * Return: char
  **/
 char *_strchr(const char *s, int c)
 {
